@@ -1,16 +1,16 @@
-﻿
-using BrighterShoresTools.Professions.Core.Data;
+﻿using BrighterShoresTools.Professions.Core.Data;
+using BrighterShoresTools.Professions.Forager.Services;
 
-namespace BrighterShoresTools.Professions.Forager.Services.Tests;
+namespace BrighterShoresTools.Professions.ForagerTests.Services;
 
 [TestClass()]
-public class ForagerActionRepositoryTests
+public class ForagerUnlockRepositoryTests
 {
     [TestMethod()]
     public async Task GetAllTestAsync()
     {
         // Arrange
-        ForagerActionRepository repository = new();
+        ForagerUnlockRepository repository = new();
 
         // Act
         List<ProfessionUnlock> actions = await repository.GetAll();
@@ -24,7 +24,7 @@ public class ForagerActionRepositoryTests
     public async Task GetByName_Mauve_Bellplant_Test()
     {
         // Arrange
-        ForagerActionRepository repository = new();
+        ForagerUnlockRepository repository = new();
 
         // Act
         ProfessionUnlock? action = await repository.GetByName("Mauve Bellplant");

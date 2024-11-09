@@ -3,7 +3,7 @@ using BrighterShoresTools.Professions.Core.Services;
 
 namespace BrighterShoresTools.Professions.Forager.Services;
 
-public class ForagerActionRepository : IProfessionUnlockRepository
+public class ForagerUnlockRepository : IProfessionUnlockRepository
 {
     private static List<ProfessionUnlock> _foragerActions =
         [
