@@ -2,6 +2,6 @@
 
 namespace BrighterShoresTools.Frontend.ViewModels;
 
-internal partial class WindowViewModel : ObservableValidator
+public partial class WindowViewModel : ObservableValidator
 {
 }

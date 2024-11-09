@@ -1,4 +1,7 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using BrighterShoresTools.Frontend.ViewModels;
+using BrighterShoresTools.Professions.Core.Services;
+using BrighterShoresTools.Professions.Forager.Services;
+using Microsoft.Extensions.DependencyInjection;
 using System.Windows;
 
 namespace BrighterShoresTools.Frontend;
@@ -20,6 +23,10 @@ public partial class App : Application
 
     private void ConfigureServices(IServiceCollection services)
     {
-        services.AddTransient(typeof(MainView));
+        services.AddSingleton<MainView>();
+        services.AddSingleton<MainViewModel>();
+        services.AddSingleton<ForagerCalculator>();
+        services.AddSingleton<IForagerUnlockRepository, ForagerUnlockRepository>();
+        services.AddSingleton<IExperienceCalculator, ExperienceCalculator>();
     }
 }

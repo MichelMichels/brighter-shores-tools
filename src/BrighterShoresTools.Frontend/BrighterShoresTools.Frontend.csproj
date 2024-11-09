@@ -16,4 +16,9 @@
     <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="8.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BrighterShoresTools.Professions.Forager\BrighterShoresTools.Professions.Forager.csproj" />
+    <ProjectReference Include="..\BrighterShoresTools.Professions\BrighterShoresTools.Professions.Core.csproj" />
+  </ItemGroup>
+
 </Project>
