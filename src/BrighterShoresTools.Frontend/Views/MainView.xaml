@@ -45,13 +45,10 @@
                                 <RowDefinition Height="Auto" />
                             </Grid.RowDefinitions>
 
-                            <Rectangle
-                                Grid.Row="0"
-                                Width="24"
-                                Height="24"
-                                Fill="Red"
-                                RadiusX="8"
-                                RadiusY="8" />
+                            <Image
+                                Width="96"
+                                RenderOptions.BitmapScalingMode="HighQuality"
+                                Source="{Binding IconResource}" />
                             <TextBlock
                                 Grid.Row="2"
                                 Margin="2"
@@ -84,7 +81,7 @@
                                 <TextBlock Text="Start level" />
                                 <TextBox
                                     Width="128"
-                                    Text="{Binding SelectedProfessionCalculator.StartLevel, UpdateSourceTrigger=LostFocus}"
+                                    Text="{Binding SelectedProfessionCalculator.StartLevel, UpdateSourceTrigger=PropertyChanged}"
                                     TextAlignment="Right" />
                             </StackPanel>
                         </Border>
@@ -94,7 +91,7 @@
                                 <TextBlock Text="Goal level" />
                                 <TextBox
                                     Width="128"
-                                    Text="{Binding SelectedProfessionCalculator.GoalLevel, UpdateSourceTrigger=LostFocus}"
+                                    Text="{Binding SelectedProfessionCalculator.GoalLevel, UpdateSourceTrigger=PropertyChanged}"
                                     TextAlignment="Right" />
                             </StackPanel>
                         </Border>
@@ -128,7 +125,7 @@
                                             <TextBlock
                                                 HorizontalAlignment="Center"
                                                 VerticalAlignment="Center"
-                                                Text="{Binding Key.StartingLevel, StringFormat=LVL {0}}" />
+                                                Text="{Binding Key.Level, StringFormat=LVL {0}}" />
                                         </Border>
                                     </Border>
 

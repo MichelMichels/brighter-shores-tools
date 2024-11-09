@@ -9,6 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Images\forager-icon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.3.2" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="8.0.0" />
@@ -19,6 +23,10 @@
   <ItemGroup>
     <ProjectReference Include="..\BrighterShoresTools.Professions.Forager\BrighterShoresTools.Professions.Forager.csproj" />
     <ProjectReference Include="..\BrighterShoresTools.Professions\BrighterShoresTools.Professions.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Images\forager-icon.png" />
   </ItemGroup>
 
 </Project>

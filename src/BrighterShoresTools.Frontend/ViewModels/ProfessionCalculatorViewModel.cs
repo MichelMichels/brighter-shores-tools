@@ -5,10 +5,11 @@ using CommunityToolkit.Mvvm.Input;
 
 namespace BrighterShoresTools.Frontend.ViewModels;
 
-public partial class ProfessionCalculatorViewModel(string displayName, IProfessionCalculator calculator) : ObservableValidator
+public partial class ProfessionCalculatorViewModel(string displayName, IProfessionCalculator calculator, string iconResource) : ObservableValidator
 {
     public string DisplayName { get; set; } = displayName;
     public IProfessionCalculator Calculator { get; set; } = calculator;
+    public string IconResource { get; set; } = iconResource;
 
     [ObservableProperty]
     [NotifyCanExecuteChangedFor(nameof(CalculateCommand))]

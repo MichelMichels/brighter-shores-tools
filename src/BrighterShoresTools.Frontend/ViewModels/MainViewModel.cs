@@ -14,6 +14,6 @@ public partial class MainViewModel : WindowViewModel
 
     public MainViewModel(ForagerCalculator foragerCalculator)
     {
-        _professionCalculators.Add(new ProfessionCalculatorViewModel("Forager", foragerCalculator));
+        _professionCalculators.Add(new ProfessionCalculatorViewModel("Forager", foragerCalculator, @"/Resources/Images/forager-icon.png"));
     }
 }
