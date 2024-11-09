@@ -84,7 +84,7 @@
                                 <TextBlock Text="Start level" />
                                 <TextBox
                                     Width="128"
-                                    Text="{Binding SelectedProfessionCalculator.StartLevel}"
+                                    Text="{Binding SelectedProfessionCalculator.StartLevel, UpdateSourceTrigger=LostFocus}"
                                     TextAlignment="Right" />
                             </StackPanel>
                         </Border>
@@ -94,7 +94,7 @@
                                 <TextBlock Text="Goal level" />
                                 <TextBox
                                     Width="128"
-                                    Text="{Binding SelectedProfessionCalculator.GoalLevel}"
+                                    Text="{Binding SelectedProfessionCalculator.GoalLevel, UpdateSourceTrigger=LostFocus}"
                                     TextAlignment="Right" />
                             </StackPanel>
                         </Border>
