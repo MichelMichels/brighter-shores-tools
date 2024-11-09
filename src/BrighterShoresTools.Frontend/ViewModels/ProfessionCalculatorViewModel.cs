@@ -29,4 +29,19 @@ public partial class ProfessionCalculatorViewModel(string displayName, IProfessi
     {
         Results = await Calculator.CalculateNumberOfActions(StartLevel, GoalLevel);
     }
+
+    async partial void OnStartLevelChanged(int value)
+    {
+        if (CanCalculate)
+        {
+            await Calculate();
+        }
+    }
+    async partial void OnGoalLevelChanged(int value)
+    {
+        if (CanCalculate)
+        {
+            await Calculate();
+        }
+    }
 }

@@ -8,7 +8,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:vm="clr-namespace:BrighterShoresTools.Frontend.ViewModels"
     Title="Brighter Shores | Tools"
-    Width="800"
+    Width="256"
     Height="450"
     d:DataContext="{d:DesignInstance Type={x:Type vm:MainViewModel}}"
     mc:Ignorable="d">
@@ -25,6 +25,7 @@
 
         <ListBox
             Grid.Row="0"
+            BorderThickness="0"
             ItemsSource="{Binding ProfessionCalculators}"
             SelectedItem="{Binding SelectedProfessionCalculator}">
             <ListBox.ItemsPanel>
@@ -63,7 +64,7 @@
         <Rectangle
             Grid.Row="1"
             Height="1"
-            Fill="Gray" />
+            Fill="LightGray" />
 
         <Border Grid.Row="2">
             <Grid>
@@ -72,39 +73,42 @@
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="8" />
                         <RowDefinition />
-                        <RowDefinition />
                     </Grid.RowDefinitions>
 
-                    <StackPanel Margin="4" Orientation="Horizontal">
-                        <Border Margin="4">
+                    <Grid Grid.Row="0" Margin="8,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="8" />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+
+                        <Border Grid.Column="0">
                             <StackPanel>
                                 <TextBlock Text="Start level" />
                                 <TextBox
-                                    Width="128"
+                                    GotFocus="TextBox_GotFocus"
                                     Text="{Binding SelectedProfessionCalculator.StartLevel, UpdateSourceTrigger=PropertyChanged}"
                                     TextAlignment="Right" />
                             </StackPanel>
                         </Border>
 
-                        <Border Margin="4">
+                        <Border Grid.Column="2">
                             <StackPanel>
                                 <TextBlock Text="Goal level" />
                                 <TextBox
-                                    Width="128"
+                                    GotFocus="TextBox_GotFocus"
                                     Text="{Binding SelectedProfessionCalculator.GoalLevel, UpdateSourceTrigger=PropertyChanged}"
                                     TextAlignment="Right" />
                             </StackPanel>
                         </Border>
-
-                        <Border Margin="4">
-                            <Button
-                                Padding="16,0"
-                                Command="{Binding SelectedProfessionCalculator.CalculateCommand}"
-                                Content="Calculate" />
-                        </Border>
-                    </StackPanel>
+                    </Grid>
 
                     <ListBox Grid.Row="2" ItemsSource="{Binding SelectedProfessionCalculator.Results}">
+                        <ListBox.ItemContainerStyle>
+                            <Style TargetType="ListBoxItem">
+                                <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                            </Style>
+                        </ListBox.ItemContainerStyle>
                         <ListBox.ItemTemplate>
                             <DataTemplate>
                                 <Grid>
@@ -130,7 +134,7 @@
                                     </Border>
 
                                     <Border Grid.Column="2" Padding="8">
-                                        <TextBlock Text="{Binding Key.Name}" />
+                                        <TextBlock Text="{Binding Key.Name}" TextTrimming="CharacterEllipsis" />
                                     </Border>
 
                                     <Border Grid.Column="4" Padding="8">
