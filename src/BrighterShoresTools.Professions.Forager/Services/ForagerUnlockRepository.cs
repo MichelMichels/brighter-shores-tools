@@ -1,11 +1,10 @@
 ﻿using BrighterShoresTools.Professions.Core.Data;
-using BrighterShoresTools.Professions.Core.Services;
 
 namespace BrighterShoresTools.Professions.Forager.Services;
 
-public class ForagerUnlockRepository : IProfessionUnlockRepository
+public class ForagerUnlockRepository : IForagerUnlockRepository
 {
-    private static List<ProfessionUnlock> _foragerActions =
+    private static readonly List<ProfessionUnlock> _foragerActions =
         [
             new() {
                 Name = "Mauve Bellplant",
