@@ -2,34 +2,41 @@
 
 public class ExperienceCalculator : IExperienceCalculator
 {
-    private readonly static Dictionary<int, int> experienceByLevel = new()
-    {
-        { 0 , 0 },
-        { 1 , 500 },
-        { 2 , 1015 },
-        { 3 , 1545 },
-        { 4 , 2090 },
-        { 5 , 2651 },
-        { 6 , 3229 },
-        { 7 , 4418 },
-        { 8 , 0 },
-        { 9 , 6902 },
-        { 10 , 0 },
-        { 11 , 9534 },
-        { 12 , 0 },
-        { 13 , 13736 },
-        { 14 , 16647 },
-        { 15 , 19644 },
-        { 16 , 0 },
-        { 17 , 0 },
-        { 18 , 0 },
-        { 19 , 0 },
-        { 20 , 53815 },
-    };
-
+    private readonly static List<int> experienceByLevel = [
+        0,
+        500,
+        1015,
+        1545,
+        2090,
+        2651,
+        3229,
+        4418,
+        5642,
+        6902,
+        8199,
+        9534,
+        10908,
+        13736,
+        16647,
+        19644,
+        22728,
+        25903,
+        29171,
+        32535,
+        35997,
+        53815,
+        71979,
+        90496,
+        109373,
+        128617,
+        148236,
+        168236,
+        188625,
+        209410,
+    ];
     public int GetExperienceBetweenLevels(int startLevel, int goalLevel)
     {
-        throw new NotImplementedException();
+        return experienceByLevel[goalLevel] - experienceByLevel[startLevel];
     }
 
     public int GetExperienceFromLevel(int level)

@@ -7,6 +7,7 @@ public class ExperienceCalculatorTests
 {
     [TestMethod()]
     [DataRow(14, 15, 2997)]
+    [DataRow(26, 27, 20000)]
     public void GetExperienceBetweenLevelsTest(int startLevel, int endLevel, int expectedExperience)
     {
         // Arrange
