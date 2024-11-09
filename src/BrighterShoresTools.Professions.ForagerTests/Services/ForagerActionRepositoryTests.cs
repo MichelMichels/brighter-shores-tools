@@ -13,7 +13,7 @@ public class ForagerActionRepositoryTests
         ForagerActionRepository repository = new();
 
         // Act
-        List<ProfessionAction> actions = await repository.GetAll();
+        List<ProfessionUnlock> actions = await repository.GetAll();
 
         // Assert
         Assert.IsNotNull(actions);
@@ -27,7 +27,7 @@ public class ForagerActionRepositoryTests
         ForagerActionRepository repository = new();
 
         // Act
-        ProfessionAction? action = await repository.GetByName("Mauve Bellplant");
+        ProfessionUnlock? action = await repository.GetByName("Mauve Bellplant");
 
         // Assert
         Assert.IsNotNull(action);

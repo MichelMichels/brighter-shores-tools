@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrighterShoresTools.Professions.Core", "src\BrighterShoresTools.Professions\BrighterShoresTools.Professions.Core.csproj", "{08B6C724-521B-4B02-AAFD-BCC4EE49A79F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BrighterShoresTools.Professions.Core", "src\BrighterShoresTools.Professions\BrighterShoresTools.Professions.Core.csproj", "{08B6C724-521B-4B02-AAFD-BCC4EE49A79F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrighterShoresTools.Professions.Forager", "src\BrighterShoresTools.Professions.Forager\BrighterShoresTools.Professions.Forager.csproj", "{BC5CE438-D648-43FE-88FC-6093317F4357}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BrighterShoresTools.Professions.Forager", "src\BrighterShoresTools.Professions.Forager\BrighterShoresTools.Professions.Forager.csproj", "{BC5CE438-D648-43FE-88FC-6093317F4357}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrighterShoresTools.Professions.ForagerTests", "src\BrighterShoresTools.Professions.ForagerTests\BrighterShoresTools.Professions.ForagerTests.csproj", "{66C82FFD-3B2F-4064-A4C8-EAF06DAC0362}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BrighterShoresTools.Professions.ForagerTests", "src\BrighterShoresTools.Professions.ForagerTests\BrighterShoresTools.Professions.ForagerTests.csproj", "{66C82FFD-3B2F-4064-A4C8-EAF06DAC0362}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrighterShoresTools.Professions.CoreTests", "src\BrighterShoresTools.Professions.CoreTests\BrighterShoresTools.Professions.CoreTests.csproj", "{34DF8372-E186-4BB0-A6DE-A73E69FF8366}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BrighterShoresTools.Professions.CoreTests", "src\BrighterShoresTools.Professions.CoreTests\BrighterShoresTools.Professions.CoreTests.csproj", "{34DF8372-E186-4BB0-A6DE-A73E69FF8366}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrighterShoresTools.Professions.Guard", "src\BrighterShoresTools.Professions.Guard\BrighterShoresTools.Professions.Guard.csproj", "{22A085E4-81F0-4EB4-84AA-242E24D48231}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{34DF8372-E186-4BB0-A6DE-A73E69FF8366}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{34DF8372-E186-4BB0-A6DE-A73E69FF8366}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{34DF8372-E186-4BB0-A6DE-A73E69FF8366}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22A085E4-81F0-4EB4-84AA-242E24D48231}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22A085E4-81F0-4EB4-84AA-242E24D48231}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22A085E4-81F0-4EB4-84AA-242E24D48231}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22A085E4-81F0-4EB4-84AA-242E24D48231}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

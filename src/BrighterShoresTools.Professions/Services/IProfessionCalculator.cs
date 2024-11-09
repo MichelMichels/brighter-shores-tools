@@ -4,5 +4,5 @@ namespace BrighterShoresTools.Professions.Core.Services;
 
 public interface IProfessionCalculator
 {
-    Dictionary<ProfessionAction, int> CalculateNumberOfActions(int startLevel, int endLevel);
+    Dictionary<ProfessionUnlock, int> CalculateNumberOfActions(int startLevel, int endLevel);
 }

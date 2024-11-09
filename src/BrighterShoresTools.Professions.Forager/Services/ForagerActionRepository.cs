@@ -3,9 +3,9 @@ using BrighterShoresTools.Professions.Core.Services;
 
 namespace BrighterShoresTools.Professions.Forager.Services;
 
-public class ForagerActionRepository : IProfessionActionRepository
+public class ForagerActionRepository : IProfessionUnlockRepository
 {
-    private static List<ProfessionAction> _foragerActions =
+    private static List<ProfessionUnlock> _foragerActions =
         [
             new() {
                 Name = "Mauve Bellplant",
@@ -14,14 +14,14 @@ public class ForagerActionRepository : IProfessionActionRepository
             }
         ];
 
-    public Task<List<ProfessionAction>> GetAll()
+    public Task<List<ProfessionUnlock>> GetAll()
     {
         return Task.FromResult(_foragerActions);
     }
 
-    public Task<ProfessionAction?> GetByName(string name)
+    public Task<ProfessionUnlock?> GetByName(string name)
     {
-        ProfessionAction? action = _foragerActions.FirstOrDefault(x => x.Name.Equals(name));
+        ProfessionUnlock? action = _foragerActions.FirstOrDefault(x => x.Name.Equals(name));
         return Task.FromResult(action);
     }
 }

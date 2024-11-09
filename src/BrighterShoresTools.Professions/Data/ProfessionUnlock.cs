@@ -1,6 +1,6 @@
 ﻿namespace BrighterShoresTools.Professions.Core.Data;
 
-public class ProfessionAction
+public class ProfessionUnlock
 {
     public string Name { get; set; } = string.Empty;
     public int ExperiencePoints { get; set; } = 0;

@@ -1,4 +1,6 @@
-﻿namespace BrighterShoresTools.Professions.Core.Services.Tests;
+﻿using BrighterShoresTools.Professions.Core.Services;
+
+namespace BrighterShoresTools.Professions.CoreTests.Services;
 
 [TestClass()]
 public class ExperienceCalculatorTests
@@ -26,6 +28,8 @@ public class ExperienceCalculatorTests
     [DataRow(5, 2651)]
     [DataRow(6, 3229)]
     [DataRow(7, 4418)]
+    [DataRow(9, 6902)]
+    [DataRow(11, 9534)]
     [DataRow(14, 16647)]
     [DataRow(15, 19644)]
     public void GetExperienceFromLevelTest(int level, int expectedExperience)

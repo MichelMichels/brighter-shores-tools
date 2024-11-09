@@ -11,7 +11,7 @@ public class ForagerCalculatorTests
     {
         // Arrange
         ForagerActionRepository foragerActionLoader = new();
-        List<ProfessionAction> actions = await foragerActionLoader.GetAll();
+        List<ProfessionUnlock> actions = await foragerActionLoader.GetAll();
 
         // Act
 

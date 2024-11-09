@@ -5,7 +5,7 @@ namespace BrighterShoresTools.Professions.Forager.Services;
 
 public class ForagerCalculator : IProfessionCalculator
 {
-    public Dictionary<ProfessionAction, int> CalculateNumberOfActions(int startLevel, int endLevel)
+    public Dictionary<ProfessionUnlock, int> CalculateNumberOfActions(int startLevel, int endLevel)
     {
         throw new NotImplementedException();
     }
