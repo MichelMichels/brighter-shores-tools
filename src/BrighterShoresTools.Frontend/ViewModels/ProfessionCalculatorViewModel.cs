@@ -46,6 +46,9 @@ public partial class ProfessionCalculatorViewModel : ObservableValidator
     [NotifyCanExecuteChangedFor(nameof(CalculateCommand))]
     private PotionModifierViewModel _selectedPotionModifier;
 
+    [ObservableProperty]
+    private bool _isOnlyPossibleUnlocksVisible = true;
+
     public ProfessionCalculatorViewModel(string displayName, IProfessionCalculator calculator, string iconResource, IExperienceCalculator experienceCalculator)
     {
         DisplayName = displayName;
@@ -69,7 +72,8 @@ public partial class ProfessionCalculatorViewModel : ObservableValidator
     [RelayCommand(CanExecute = nameof(CanCalculate))]
     private async Task Calculate()
     {
-        Results = await Calculator.CalculateNumberOfActions(StartLevel, GoalLevel, SelectedPotionModifier.Modifier);
+        Results = await Calculator.CalculateNumberOfActions(StartLevel, GoalLevel, SelectedPotionModifier.Modifier, IsOnlyPossibleUnlocksVisible);
+
     }
 
     async partial void OnStartLevelChanged(int value)
@@ -91,6 +95,13 @@ public partial class ProfessionCalculatorViewModel : ObservableValidator
         GoalExperience = experienceCalculator.GetExperienceFromLevel(value);
     }
     async partial void OnSelectedPotionModifierChanged(PotionModifierViewModel value)
+    {
+        if (CanCalculate)
+        {
+            await Calculate();
+        }
+    }
+    async partial void OnIsOnlyPossibleUnlocksVisibleChanged(bool value)
     {
         if (CanCalculate)
         {

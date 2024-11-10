@@ -10,16 +10,16 @@ public abstract class ProfessionCalculator(
     private readonly IProfessionUnlockRepository professionUnlockRepository = professionUnlockRepository ?? throw new ArgumentNullException(nameof(professionUnlockRepository));
     private readonly IExperienceCalculator experienceCalculator = experienceCalculator ?? throw new ArgumentNullException(nameof(experienceCalculator));
 
-    private static List<ProfessionUnlock> _professionUnlocks = [];
+    private List<ProfessionUnlock> _professionUnlocks = [];
 
-    public async Task<Dictionary<ProfessionUnlock, int>> CalculateNumberOfActions(int startLevel, int endLevel, double modifier)
+    public async Task<Dictionary<ProfessionUnlock, int>> CalculateNumberOfActions(int startLevel, int endLevel, double modifier = 1, bool isOnlyPossibleUnlocks = true)
     {
         await TryLoadUnlocks();
 
         Dictionary<ProfessionUnlock, int> result = [];
 
         int totalExperience = experienceCalculator.GetExperienceBetweenLevels(startLevel, endLevel);
-        foreach (ProfessionUnlock unlock in _professionUnlocks)
+        foreach (ProfessionUnlock unlock in _professionUnlocks.Where(x => !isOnlyPossibleUnlocks || x.Level <= endLevel))
         {
             result.Add(unlock, totalExperience / (int)(unlock.ExperiencePoints * modifier));
         }
@@ -29,6 +29,9 @@ public abstract class ProfessionCalculator(
 
     private async Task TryLoadUnlocks()
     {
-        _professionUnlocks = await professionUnlockRepository.GetAll();
+        if (_professionUnlocks.Count == 0)
+        {
+            _professionUnlocks = await professionUnlockRepository.GetAll();
+        }
     }
 }

@@ -132,9 +132,14 @@
                                 </Grid>
 
                                 <ComboBox
+                                    Margin="0,0,0,4"
                                     DisplayMemberPath="Description"
                                     ItemsSource="{Binding SelectedProfessionCalculator.PotionModifiers}"
                                     SelectedItem="{Binding SelectedProfessionCalculator.SelectedPotionModifier}" />
+
+                                <CheckBox IsChecked="{Binding SelectedProfessionCalculator.IsOnlyPossibleUnlocksVisible}">
+                                    <TextBlock Text="Only show possible unlocks within level range." />
+                                </CheckBox>
                             </StackPanel>
                         </Expander>
                     </StackPanel>
