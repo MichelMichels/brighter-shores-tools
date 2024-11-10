@@ -1,0 +1,11 @@
+﻿<Project Sdk="WixToolset.Sdk/5.0.2">
+  <PropertyGroup>
+    <OutputName>$(MSBuildProjectName)$(Version)</OutputName>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="bst.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BrighterShoresTools.Frontend\BrighterShoresTools.Frontend.csproj" />
+  </ItemGroup>
+</Project>

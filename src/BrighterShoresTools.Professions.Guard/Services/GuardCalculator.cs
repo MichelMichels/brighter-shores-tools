@@ -3,7 +3,7 @@
 namespace BrighterShoresTools.Professions.Guard.Services;
 
 public class GuardCalculator(
-    GuardUnlockRepository guardUnlockRepository,
+    IGuardUnlockRepository guardUnlockRepository,
     IExperienceCalculator experienceCalculator)
     : ProfessionCalculator(guardUnlockRepository, experienceCalculator)
 {

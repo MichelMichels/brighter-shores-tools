@@ -1,0 +1,29 @@
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+  <Fragment>
+    <Icon Id="logo.exe" SourceFile="bst.ico" />
+
+    <ComponentGroup Id="App" Directory="INSTALLFOLDER">
+        <Component>
+          <File Source="BrighterShoresTools.exe" />
+          <Shortcut Name="Brighter Shores Tools" Advertise="yes" Directory="ProgramMenuFolder" Icon="logo.exe" />
+          <Shortcut Name="Brighter Shores Tools" Advertise="yes" Directory="DesktopFolder" Icon="logo.exe" />
+        </Component>
+
+      <File Source="BrighterShoresTools.deps.json" />
+      <File Source="BrighterShoresTools.dll" />
+      <File Source="BrighterShoresTools.Professions.Core.dll" />
+      <File Source="BrighterShoresTools.Professions.Forager.dll" />
+      <File Source="BrighterShoresTools.Professions.Guard.dll" />
+      <File Source="BrighterShoresTools.runtimeconfig.json" />
+      <File Source="CommunityToolkit.Mvvm.dll" />
+      <File Source="Microsoft.Extensions.Configuration.Abstractions.dll" />
+      <File Source="Microsoft.Extensions.Configuration.Binder.dll" />
+      <File Source="Microsoft.Extensions.Configuration.dll" />
+      <File Source="Microsoft.Extensions.DependencyInjection.Abstractions.dll" />
+      <File Source="Microsoft.Extensions.DependencyInjection.dll" />
+      <File Source="Microsoft.Extensions.Options.ConfigurationExtensions.dll" />
+      <File Source="Microsoft.Extensions.Options.dll" />
+      <File Source="Microsoft.Extensions.Primitives.dll" />
+    </ComponentGroup>
+  </Fragment>
+</Wix>

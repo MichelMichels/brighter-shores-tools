@@ -1,6 +1,7 @@
 ﻿using BrighterShoresTools.Frontend.ViewModels;
 using BrighterShoresTools.Professions.Core.Services;
 using BrighterShoresTools.Professions.Forager.Services;
+using BrighterShoresTools.Professions.Guard.Services;
 using Microsoft.Extensions.DependencyInjection;
 using System.Windows;
 
@@ -28,5 +29,7 @@ public partial class App : Application
         services.AddSingleton<ForagerCalculator>();
         services.AddSingleton<IForagerUnlockRepository, ForagerUnlockRepository>();
         services.AddSingleton<IExperienceCalculator, ExperienceCalculator>();
+        services.AddSingleton<IGuardUnlockRepository, GuardUnlockRepository>();
+        services.AddSingleton<GuardCalculator>();
     }
 }

@@ -6,11 +6,17 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
+    <AssemblyName>BrighterShoresTools</AssemblyName>
+    <ApplicationIcon>Resources\Images\bst.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
     <None Remove="Resources\Images\forager-icon.png" />
     <None Remove="Resources\Images\guard-icon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\Images\bst.ico" />
   </ItemGroup>
 
   <ItemGroup>
