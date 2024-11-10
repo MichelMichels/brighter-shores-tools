@@ -6,6 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:BrighterShoresTools.Frontend"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:views="clr-namespace:BrighterShoresTools.Frontend.Views"
     xmlns:vm="clr-namespace:BrighterShoresTools.Frontend.ViewModels"
     Title="Brighter Shores | Tools"
     Width="256"
@@ -23,43 +24,29 @@
             <RowDefinition />
         </Grid.RowDefinitions>
 
-        <ListBox
-            Grid.Row="0"
-            BorderThickness="0"
-            ItemsSource="{Binding ProfessionCalculators}"
-            SelectedItem="{Binding SelectedProfessionCalculator}">
-            <ListBox.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <StackPanel Orientation="Horizontal" />
-                </ItemsPanelTemplate>
-            </ListBox.ItemsPanel>
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <Border
-                        Width="64"
-                        Height="64"
-                        Padding="4">
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition />
-                                <RowDefinition Height="4" />
-                                <RowDefinition Height="Auto" />
-                            </Grid.RowDefinitions>
+        <!--  Header  -->
+        <StackPanel Grid.Row="0">
+            <Border Padding="8">
+                <TextBlock FontWeight="Bold" Text="Professions" />
+            </Border>
 
-                            <Image
-                                Width="96"
-                                RenderOptions.BitmapScalingMode="HighQuality"
-                                Source="{Binding IconResource}" />
-                            <TextBlock
-                                Grid.Row="2"
-                                Margin="2"
-                                Text="{Binding DisplayName}"
-                                TextAlignment="Center" />
-                        </Grid>
-                    </Border>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
+            <ListBox
+                BorderThickness="0"
+                ItemsSource="{Binding ProfessionCalculators}"
+                SelectedItem="{Binding SelectedProfessionCalculator}">
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal" />
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <views:ProfessionCalculatorShortcut />
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+
+        </StackPanel>
 
         <Rectangle
             Grid.Row="1"
