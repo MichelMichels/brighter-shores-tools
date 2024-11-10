@@ -36,7 +36,8 @@
             <ListBox
                 BorderThickness="0"
                 ItemsSource="{Binding ProfessionCalculators}"
-                SelectedItem="{Binding SelectedProfessionCalculator}">
+                SelectedItem="{Binding SelectedProfessionCalculator}"
+                Validation.ErrorTemplate="{x:Null}">
                 <ListBox.ItemsPanel>
                     <ItemsPanelTemplate>
                         <StackPanel Orientation="Horizontal" />
@@ -59,7 +60,7 @@
         <!--  Content  -->
         <Border Grid.Row="2">
             <Grid>
-                <Grid Visibility="{Binding SelectedProfessionCalculator, Converter={StaticResource IsNotNullToVisible}}">
+                <Grid Validation.ErrorTemplate="{x:Null}" Visibility="{Binding SelectedProfessionCalculator, Converter={StaticResource IsNotNullToVisible}}">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="8" />
