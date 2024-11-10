@@ -16,18 +16,20 @@
     <Window.Resources>
         <converters:NullToVisibleConverter x:Key="IsNullToVisible" />
         <converters:NotNullToVisibleConverter x:Key="IsNotNullToVisible" />
-        <converters:EmptyListToVisibleConverter x:Key="IsEmptyToVisible" />
+        <converters:EmptyToVisibleConverter x:Key="IsEmptyToVisible" />
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
         <!--  Header  -->
         <StackPanel Grid.Row="0">
-            <Border Padding="8">
+            <Border Padding="8,4">
                 <TextBlock FontWeight="Bold" Text="Professions" />
             </Border>
 
@@ -54,6 +56,7 @@
             Height="1"
             Fill="LightGray" />
 
+        <!--  Content  -->
         <Border Grid.Row="2">
             <Grid>
                 <Grid Visibility="{Binding SelectedProfessionCalculator, Converter={StaticResource IsNotNullToVisible}}">
@@ -63,7 +66,7 @@
                         <RowDefinition />
                     </Grid.RowDefinitions>
 
-                    <Grid Grid.Row="0" Margin="8,0">
+                    <Grid Grid.Row="0" Margin="8,4">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition />
                             <ColumnDefinition Width="8" />
@@ -91,57 +94,68 @@
                         </Border>
                     </Grid>
 
-                    <Grid Grid.Row="2">
-                        <DataGrid
-                            AutoGenerateColumns="False"
-                            BorderThickness="0"
-                            GridLinesVisibility="Horizontal"
-                            HeadersVisibility="None"
-                            HorizontalGridLinesBrush="LightGray"
-                            IsReadOnly="True"
-                            ItemsSource="{Binding SelectedProfessionCalculator.Results}"
-                            ScrollViewer.VerticalScrollBarVisibility="Visible">
-                            <DataGrid.Columns>
-                                <DataGridTemplateColumn>
-                                    <DataGridTemplateColumn.CellTemplate>
-                                        <DataTemplate>
-                                            <Border Padding="8,4" CornerRadius="8">
-                                                <Border.Background>
-                                                    <SolidColorBrush Opacity="0.5" Color="AliceBlue" />
-                                                </Border.Background>
+                    <!--  Results  -->
+                    <DockPanel Grid.Row="2">
+                        <Border Padding="8,4" DockPanel.Dock="Top">
+                            <TextBlock FontWeight="Bold" Text="Results" />
+                        </Border>
+                        <Grid>
+                            <DataGrid
+                                AutoGenerateColumns="False"
+                                BorderThickness="0"
+                                GridLinesVisibility="Horizontal"
+                                HeadersVisibility="None"
+                                HorizontalGridLinesBrush="LightGray"
+                                IsReadOnly="True"
+                                ItemsSource="{Binding SelectedProfessionCalculator.Results}"
+                                ScrollViewer.VerticalScrollBarVisibility="Visible">
+                                <DataGrid.Columns>
+                                    <DataGridTemplateColumn>
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <Border Padding="8,4" CornerRadius="8">
+                                                    <Border.Background>
+                                                        <SolidColorBrush Opacity="0.5" Color="AliceBlue" />
+                                                    </Border.Background>
 
-                                                <TextBlock
-                                                    HorizontalAlignment="Center"
-                                                    VerticalAlignment="Center"
-                                                    Text="{Binding Key.Level, StringFormat=LVL {0}}" />
-                                            </Border>
-                                        </DataTemplate>
-                                    </DataGridTemplateColumn.CellTemplate>
-                                </DataGridTemplateColumn>
+                                                    <TextBlock
+                                                        HorizontalAlignment="Center"
+                                                        VerticalAlignment="Center"
+                                                        Text="{Binding Key.Level, StringFormat=LVL {0}}" />
+                                                </Border>
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
 
 
-                                <DataGridTextColumn Width="*" Binding="{Binding Key.Name}">
-                                    <DataGridTextColumn.ElementStyle>
-                                        <Style TargetType="TextBlock">
-                                            <Setter Property="TextTrimming" Value="CharacterEllipsis" />
-                                            <Setter Property="VerticalAlignment" Value="Center" />
-                                        </Style>
-                                    </DataGridTextColumn.ElementStyle>
-                                </DataGridTextColumn>
+                                    <DataGridTextColumn Width="*" Binding="{Binding Key.Name}">
+                                        <DataGridTextColumn.ElementStyle>
+                                            <Style TargetType="TextBlock">
+                                                <Setter Property="TextTrimming" Value="CharacterEllipsis" />
+                                                <Setter Property="VerticalAlignment" Value="Center" />
+                                            </Style>
+                                        </DataGridTextColumn.ElementStyle>
+                                    </DataGridTextColumn>
 
-                                <DataGridTextColumn Binding="{Binding Value, StringFormat={}{0} actions}">
-                                    <DataGridTextColumn.ElementStyle>
-                                        <Style TargetType="TextBlock">
-                                            <Setter Property="VerticalAlignment" Value="Center" />
-                                            <Setter Property="TextAlignment" Value="Right" />
-                                        </Style>
-                                    </DataGridTextColumn.ElementStyle>
-                                </DataGridTextColumn>
-                            </DataGrid.Columns>
-                        </DataGrid>
+                                    <DataGridTextColumn Binding="{Binding Value, StringFormat={}{0} actions}">
+                                        <DataGridTextColumn.ElementStyle>
+                                            <Style TargetType="TextBlock">
+                                                <Setter Property="VerticalAlignment" Value="Center" />
+                                                <Setter Property="TextAlignment" Value="Right" />
+                                            </Style>
+                                        </DataGridTextColumn.ElementStyle>
+                                    </DataGridTextColumn>
+                                </DataGrid.Columns>
+                            </DataGrid>
 
-                        <TextBlock Text="No results for input." Visibility="{Binding SelectedProfessionCalculator.Results, Converter={StaticResource IsEmptyToVisible}}" />
-                    </Grid>
+                            <TextBlock
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Text="No results."
+                                Visibility="{Binding SelectedProfessionCalculator.Results, Converter={StaticResource IsEmptyToVisible}}" />
+                        </Grid>
+
+                    </DockPanel>
                 </Grid>
 
                 <StackPanel
@@ -155,5 +169,22 @@
                 </StackPanel>
             </Grid>
         </Border>
+
+        <Rectangle
+            Grid.Row="3"
+            Height="1"
+            Fill="LightGray" />
+
+        <!--  Footer  -->
+        <StatusBar Grid.Row="4">
+            <StatusBarItem>
+                <Hyperlink NavigateUri="https://github.com/MichelMichels/brighter-shores-tools" RequestNavigate="Hyperlink_RequestNavigate">
+                    <TextBlock Text="GitHub" />
+                </Hyperlink>
+            </StatusBarItem>
+            <StatusBarItem HorizontalAlignment="Right">
+                <TextBlock Text="{Binding Version, FallbackValue='vX.YZ'}" />
+            </StatusBarItem>
+        </StatusBar>
     </Grid>
 </Window>
