@@ -32,7 +32,7 @@ public class GuardUnlockRepositoryTests
         // Assert
         Assert.IsNotNull(action);
         Assert.AreEqual("Sparring Guard", action.Name);
-        Assert.AreEqual(0, action.StartingLevel);
+        Assert.AreEqual(0, action.Level);
         Assert.AreEqual(205, action.ExperiencePoints);
     }
 }

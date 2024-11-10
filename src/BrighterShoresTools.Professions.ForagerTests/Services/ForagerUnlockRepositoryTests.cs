@@ -32,7 +32,7 @@ public class ForagerUnlockRepositoryTests
         // Assert
         Assert.IsNotNull(action);
         Assert.AreEqual("Mauve Bellplant", action.Name);
-        Assert.AreEqual(12, action.StartingLevel);
+        Assert.AreEqual(12, action.Level);
         Assert.AreEqual(118, action.ExperiencePoints);
     }
 }

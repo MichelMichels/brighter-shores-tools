@@ -1,35 +1,24 @@
-﻿using BrighterShoresTools.Professions.Core.Data;
+﻿using BrighterShoresTools.Professions.Core.Services;
 
 namespace BrighterShoresTools.Professions.Forager.Services;
 
-public class ForagerUnlockRepository : IForagerUnlockRepository
+public class ForagerUnlockRepository : ProfessionUnlockRepository, IForagerUnlockRepository
 {
-    private static readonly List<ProfessionUnlock> _foragerActions =
-    [
-        new(0, "Brown Kelp", 84),
-        new(2, "Creamy Wallplant", 67),
-        new(4, "White Periwinkle", 71),
-        new(6, "Horn Shell", 100),
-        new(8, "Piper Potato", 105),
-        new(10, "Tangled Pond Weed", 84),
-        new(12, "Mauve Bellplant", 118),
-        new(14, "Huge Monument Piece", 94),
-        new(16, "White Water Lily", 133),
-        new(18, "Wrinkled Starfish", 141),
-        new(20, "Gray Louse", 9),
-        new(23, "Hefty Monument Piece", 123),
-        new(26, "Slippe Sea Slug", 10),
-        new(29, "Green Hogberries", 184),
-    ];
-
-    public Task<List<ProfessionUnlock>> GetAll()
+    public ForagerUnlockRepository()
     {
-        return Task.FromResult(_foragerActions);
-    }
-
-    public Task<ProfessionUnlock?> GetByName(string name)
-    {
-        ProfessionUnlock? action = _foragerActions.FirstOrDefault(x => x.Name.Equals(name));
-        return Task.FromResult(action);
+        AddUnlock(0, "Brown Kelp", 84);
+        AddUnlock(2, "Creamy Wallplant", 67);
+        AddUnlock(4, "White Periwinkle", 71);
+        AddUnlock(6, "Horn Shell", 100);
+        AddUnlock(8, "Piper Potato", 105);
+        AddUnlock(10, "Tangled Pond Weed", 84);
+        AddUnlock(12, "Mauve Bellplant", 118);
+        AddUnlock(14, "Huge Monument Piece", 94);
+        AddUnlock(16, "White Water Lily", 133);
+        AddUnlock(18, "Wrinkled Starfish", 141);
+        AddUnlock(20, "Gray Louse", 9);
+        AddUnlock(23, "Hefty Monument Piece", 123);
+        AddUnlock(26, "Slippe Sea Slug", 10);
+        AddUnlock(29, "Green Hogberries", 184);
     }
 }

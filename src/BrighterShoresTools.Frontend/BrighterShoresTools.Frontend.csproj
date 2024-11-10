@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <None Remove="Resources\Images\forager-icon.png" />
+    <None Remove="Resources\Images\guard-icon.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,11 +23,13 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BrighterShoresTools.Professions.Forager\BrighterShoresTools.Professions.Forager.csproj" />
+    <ProjectReference Include="..\BrighterShoresTools.Professions.Guard\BrighterShoresTools.Professions.Guard.csproj" />
     <ProjectReference Include="..\BrighterShoresTools.Professions\BrighterShoresTools.Professions.Core.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Resources\Images\forager-icon.png" />
+    <Resource Include="Resources\Images\guard-icon.png" />
   </ItemGroup>
 
 </Project>

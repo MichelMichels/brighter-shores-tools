@@ -15,11 +15,7 @@ public class ForagerCalculatorTests
         IForagerUnlockRepository foragerUnlockRepository = Substitute.For<IForagerUnlockRepository>();
         foragerUnlockRepository.GetAll().Returns(Task.FromResult(new List<ProfessionUnlock>()
         {
-            new() {
-                ExperiencePoints = 100,
-                Name = "Test unlock",
-                StartingLevel = 0
-            }
+            new(0, "Test unlock", 100)
         }));
 
         IExperienceCalculator experienceCalculator = Substitute.For<IExperienceCalculator>();
