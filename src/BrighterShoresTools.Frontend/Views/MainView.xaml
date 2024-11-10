@@ -16,6 +16,7 @@
     <Window.Resources>
         <converters:NullToVisibleConverter x:Key="IsNullToVisible" />
         <converters:NotNullToVisibleConverter x:Key="IsNotNullToVisible" />
+        <converters:EmptyListToVisibleConverter x:Key="IsEmptyToVisible" />
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
@@ -90,48 +91,57 @@
                         </Border>
                     </Grid>
 
-                    <ListBox Grid.Row="2" ItemsSource="{Binding SelectedProfessionCalculator.Results}">
-                        <ListBox.ItemContainerStyle>
-                            <Style TargetType="ListBoxItem">
-                                <Setter Property="HorizontalContentAlignment" Value="Stretch" />
-                            </Style>
-                        </ListBox.ItemContainerStyle>
-                        <ListBox.ItemTemplate>
-                            <DataTemplate>
-                                <Grid>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="Auto" />
-                                        <ColumnDefinition Width="8" />
-                                        <ColumnDefinition Width="*" />
-                                        <ColumnDefinition Width="8" />
-                                        <ColumnDefinition Width="Auto" />
-                                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Row="2">
+                        <DataGrid
+                            AutoGenerateColumns="False"
+                            BorderThickness="0"
+                            GridLinesVisibility="Horizontal"
+                            HeadersVisibility="None"
+                            HorizontalGridLinesBrush="LightGray"
+                            IsReadOnly="True"
+                            ItemsSource="{Binding SelectedProfessionCalculator.Results}"
+                            ScrollViewer.VerticalScrollBarVisibility="Visible">
+                            <DataGrid.Columns>
+                                <DataGridTemplateColumn>
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Border Padding="8,4" CornerRadius="8">
+                                                <Border.Background>
+                                                    <SolidColorBrush Opacity="0.5" Color="AliceBlue" />
+                                                </Border.Background>
 
-                                    <Border Grid.Column="0">
-                                        <Border
-                                            Padding="8,4"
-                                            Background="AliceBlue"
-                                            CornerRadius="8">
+                                                <TextBlock
+                                                    HorizontalAlignment="Center"
+                                                    VerticalAlignment="Center"
+                                                    Text="{Binding Key.Level, StringFormat=LVL {0}}" />
+                                            </Border>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
 
-                                            <TextBlock
-                                                HorizontalAlignment="Center"
-                                                VerticalAlignment="Center"
-                                                Text="{Binding Key.Level, StringFormat=LVL {0}}" />
-                                        </Border>
-                                    </Border>
 
-                                    <Border Grid.Column="2" Padding="8">
-                                        <TextBlock Text="{Binding Key.Name}" TextTrimming="CharacterEllipsis" />
-                                    </Border>
+                                <DataGridTextColumn Width="*" Binding="{Binding Key.Name}">
+                                    <DataGridTextColumn.ElementStyle>
+                                        <Style TargetType="TextBlock">
+                                            <Setter Property="TextTrimming" Value="CharacterEllipsis" />
+                                            <Setter Property="VerticalAlignment" Value="Center" />
+                                        </Style>
+                                    </DataGridTextColumn.ElementStyle>
+                                </DataGridTextColumn>
 
-                                    <Border Grid.Column="4" Padding="8">
-                                        <TextBlock Text="{Binding Value, StringFormat={}{0} actions}" />
-                                    </Border>
+                                <DataGridTextColumn Binding="{Binding Value, StringFormat={}{0} actions}">
+                                    <DataGridTextColumn.ElementStyle>
+                                        <Style TargetType="TextBlock">
+                                            <Setter Property="VerticalAlignment" Value="Center" />
+                                            <Setter Property="TextAlignment" Value="Right" />
+                                        </Style>
+                                    </DataGridTextColumn.ElementStyle>
+                                </DataGridTextColumn>
+                            </DataGrid.Columns>
+                        </DataGrid>
 
-                                </Grid>
-                            </DataTemplate>
-                        </ListBox.ItemTemplate>
-                    </ListBox>
+                        <TextBlock Text="No results for input." Visibility="{Binding SelectedProfessionCalculator.Results, Converter={StaticResource IsEmptyToVisible}}" />
+                    </Grid>
                 </Grid>
 
                 <StackPanel
