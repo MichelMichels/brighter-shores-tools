@@ -12,16 +12,16 @@ public abstract class ProfessionCalculator(
 
     private static List<ProfessionUnlock> _professionUnlocks = [];
 
-    public async Task<Dictionary<ProfessionUnlock, int>> CalculateNumberOfActions(int startLevel, int endLevel)
+    public async Task<Dictionary<ProfessionUnlock, int>> CalculateNumberOfActions(int startLevel, int endLevel, double modifier)
     {
         await TryLoadUnlocks();
 
         Dictionary<ProfessionUnlock, int> result = [];
 
-        int xp = experienceCalculator.GetExperienceBetweenLevels(startLevel, endLevel);
+        int totalExperience = experienceCalculator.GetExperienceBetweenLevels(startLevel, endLevel);
         foreach (ProfessionUnlock unlock in _professionUnlocks)
         {
-            result.Add(unlock, xp / unlock.ExperiencePoints);
+            result.Add(unlock, totalExperience / (int)(unlock.ExperiencePoints * modifier));
         }
 
         return result;

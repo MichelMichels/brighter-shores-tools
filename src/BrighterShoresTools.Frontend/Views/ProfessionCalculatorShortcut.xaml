@@ -9,8 +9,8 @@
     d:DataContext="{d:DesignInstance Type={x:Type vm:ProfessionCalculatorViewModel}}"
     mc:Ignorable="d">
     <Border
-        Width="64"
-        Height="64"
+        Width="48"
+        Height="48"
         Padding="2">
         <Grid>
             <Grid.RowDefinitions>
@@ -19,10 +19,7 @@
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
 
-            <Image
-                Width="96"
-                RenderOptions.BitmapScalingMode="HighQuality"
-                Source="{Binding IconResource}" />
+            <Image RenderOptions.BitmapScalingMode="HighQuality" Source="{Binding IconResource}" />
             <TextBlock
                 Grid.Row="2"
                 Text="{Binding DisplayName, FallbackValue='DisplayName'}"
