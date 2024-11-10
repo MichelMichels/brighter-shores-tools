@@ -1,26 +1,31 @@
 # Tools for Brighter Shores
 
 > [!WARNING]
-> This is very much a WIP repository. Use at own risk.
+> This is very much a WIP repository. This code comes with no warranties. Use at own risk.
 
+<p align="center">
+  <img src="docs/screenshot.png" /> 
+</p>
 
-Tools and calculators for the MMORPG Brighter Shores
+<p align="center">Tools for the MMORPG Brighter Shores &bullet; <a href="https://github.com/MichelMichels/brighter-shores-tools/issues">Report an issue</a></p>
 
-<img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2791440/header.jpg" />
+## Getting started
 
+- Grab the latest `.msi` from the [release page](https://github.com/MichelMichels/brighter-shores-tools/releases) and install.
+- If you don't want to use my binaries, feel free to clone the whole project and generate your own with the setup project
 
+## Status
 
+Progress in implementing calculators:
 
-## Calculators
+| Profession |          Status          |
+| ---------- | :----------------------: |
+| Forager    | 🟩 (waiting on wiki data) |
+| Guard      |            🟧             |
+| Cooking    |            🟥             |
+| Fisherman  |            🟥             |
+| Alchemy    |            🟥             |
 
-Progress in implemeting calculators:
+## Suggestions
 
-
-| Profession          | Status |
-| ------------------- | :----: |
-| Level to experience |   🟧    |
-| Forager             |   🟧    |
-| Guard               |   🟥    |
-| Cooking             |   🟥    |
-| Fisherman           |   🟥    |
-| Alchemy             |   🟥    |
+Please make use of the [issues page](https://github.com/MichelMichels/brighter-shores-tools/issues) to make suggestions. I must warn you, my time is limited and decision to implement something will be solely my own.
