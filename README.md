@@ -18,13 +18,15 @@
 
 Progress in implementing calculators:
 
-| Profession |          Status          |
-| ---------- | :----------------------: |
-| Forager    | 🟩 (waiting on wiki data) |
-| Guard      |            🟧             |
-| Cooking    |            🟥             |
-| Fisherman  |            🟥             |
-| Alchemy    |            🟥             |
+| Profession | Status |
+| ---------- | :----: |
+| Forager    |   🟩    |
+| Guard      |   🟩    |
+| Chef       |   🟩    |
+| Fisher     |   🟩    |
+| Alchemy    |   🟥    |
+
+All data is dependent on the Brighter Shores wiki data.
 
 ## Suggestions
 
