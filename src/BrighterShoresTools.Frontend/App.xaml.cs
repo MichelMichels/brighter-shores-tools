@@ -1,6 +1,7 @@
 ﻿using BrighterShoresTools.Frontend.ViewModels;
 using BrighterShoresTools.Professions.Chef.Services;
 using BrighterShoresTools.Professions.Core.Services;
+using BrighterShoresTools.Professions.Fisher.Services;
 using BrighterShoresTools.Professions.Forager.Services;
 using BrighterShoresTools.Professions.Guard.Services;
 using Microsoft.Extensions.DependencyInjection;
@@ -32,7 +33,9 @@ public partial class App : Application
         services.AddSingleton<IExperienceCalculator, ExperienceCalculator>();
         services.AddSingleton<IGuardUnlockRepository, GuardUnlockRepository>();
         services.AddSingleton<IChefUnlockRepository, ChefUnlockRepository>();
+        services.AddSingleton<IFisherUnlockRepository, FisherUnlockRepository>();
         services.AddSingleton<GuardCalculator>();
         services.AddSingleton<ChefCalculator>();
+        services.AddSingleton<FisherCalculator>();
     }
 }

@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <None Remove="Resources\Images\chef-icon.png" />
+    <None Remove="Resources\Images\fisher-icon.png" />
     <None Remove="Resources\Images\forager-icon.png" />
     <None Remove="Resources\Images\guard-icon.png" />
   </ItemGroup>
@@ -30,6 +31,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\BrighterShoresTools.Professions.Chef\BrighterShoresTools.Professions.Chef.csproj" />
+    <ProjectReference Include="..\BrighterShoresTools.Profession.Fisher\BrighterShoresTools.Professions.Fisher.csproj" />
     <ProjectReference Include="..\BrighterShoresTools.Professions.Forager\BrighterShoresTools.Professions.Forager.csproj" />
     <ProjectReference Include="..\BrighterShoresTools.Professions.Guard\BrighterShoresTools.Professions.Guard.csproj" />
     <ProjectReference Include="..\BrighterShoresTools.Professions\BrighterShoresTools.Professions.Core.csproj" />
@@ -37,6 +39,7 @@
 
   <ItemGroup>
     <Resource Include="Resources\Images\chef-icon.png" />
+    <Resource Include="Resources\Images\fisher-icon.png" />
     <Resource Include="Resources\Images\forager-icon.png" />
     <Resource Include="Resources\Images\guard-icon.png" />
   </ItemGroup>

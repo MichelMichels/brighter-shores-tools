@@ -26,6 +26,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrighterShoresTools.Professions.Chef", "BrighterShoresTools.Professions.Chef\BrighterShoresTools.Professions.Chef.csproj", "{B8AABB30-46E4-4E02-97F1-2EAACF14111C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrighterShoresTools.Professions.Fisher", "src\BrighterShoresTools.Profession.Fisher\BrighterShoresTools.Professions.Fisher.csproj", "{53431733-E606-44B6-969B-89C31958E411}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -181,6 +183,22 @@ Global
 		{B8AABB30-46E4-4E02-97F1-2EAACF14111C}.Release|x64.Build.0 = Release|Any CPU
 		{B8AABB30-46E4-4E02-97F1-2EAACF14111C}.Release|x86.ActiveCfg = Release|Any CPU
 		{B8AABB30-46E4-4E02-97F1-2EAACF14111C}.Release|x86.Build.0 = Release|Any CPU
+		{53431733-E606-44B6-969B-89C31958E411}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53431733-E606-44B6-969B-89C31958E411}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53431733-E606-44B6-969B-89C31958E411}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{53431733-E606-44B6-969B-89C31958E411}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{53431733-E606-44B6-969B-89C31958E411}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{53431733-E606-44B6-969B-89C31958E411}.Debug|x64.Build.0 = Debug|Any CPU
+		{53431733-E606-44B6-969B-89C31958E411}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{53431733-E606-44B6-969B-89C31958E411}.Debug|x86.Build.0 = Debug|Any CPU
+		{53431733-E606-44B6-969B-89C31958E411}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53431733-E606-44B6-969B-89C31958E411}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53431733-E606-44B6-969B-89C31958E411}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{53431733-E606-44B6-969B-89C31958E411}.Release|ARM64.Build.0 = Release|Any CPU
+		{53431733-E606-44B6-969B-89C31958E411}.Release|x64.ActiveCfg = Release|Any CPU
+		{53431733-E606-44B6-969B-89C31958E411}.Release|x64.Build.0 = Release|Any CPU
+		{53431733-E606-44B6-969B-89C31958E411}.Release|x86.ActiveCfg = Release|Any CPU
+		{53431733-E606-44B6-969B-89C31958E411}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
