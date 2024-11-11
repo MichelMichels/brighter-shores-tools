@@ -2,7 +2,7 @@
 
 public class ExperienceCalculator : IExperienceCalculator
 {
-    private readonly static int[] experienceByLevel = new int[500];
+    private readonly static int[] experienceByLevel = new int[501];
 
     public ExperienceCalculator()
     {
