@@ -1,6 +1,6 @@
 ﻿<Project Sdk="WixToolset.Sdk/5.0.2">
   <PropertyGroup>
-    <OutputName>$(MSBuildProjectName)$(Version)</OutputName>
+    <OutputName>$(MSBuildProjectName)_v$(Version)</OutputName>
   </PropertyGroup>
   <ItemGroup>
     <Content Include="bst.ico" />

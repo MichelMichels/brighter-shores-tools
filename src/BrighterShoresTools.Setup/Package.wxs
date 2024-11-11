@@ -1,7 +1,7 @@
 ﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
   <Package 
     Name="Brighter Shores Tools" 
-    Manufacturer="Michel Michels" Version="0.2.0.0" UpgradeCode="211692f5-7102-4dc2-8d61-bb63f5cba5c5">
+    Manufacturer="Michel Michels" Version="0.3.0.0" UpgradeCode="211692f5-7102-4dc2-8d61-bb63f5cba5c5">
     <MajorUpgrade DowngradeErrorMessage="!(loc.DowngradeError)" />
 
     <MediaTemplate EmbedCab="yes" />
