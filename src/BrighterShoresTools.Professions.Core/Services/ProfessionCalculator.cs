@@ -1,4 +1,4 @@
-﻿using BrighterShoresTools.Professions.Core.Data;
+﻿using BrighterShoresTools.Professions.Core.Models;
 
 namespace BrighterShoresTools.Professions.Core.Services;
 

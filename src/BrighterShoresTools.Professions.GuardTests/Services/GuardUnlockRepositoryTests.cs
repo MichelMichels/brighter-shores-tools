@@ -1,4 +1,4 @@
-﻿using BrighterShoresTools.Professions.Core.Data;
+﻿using BrighterShoresTools.Professions.Core.Models;
 using BrighterShoresTools.Professions.Guard.Services;
 
 namespace BrighterShoresTools.Professions.GuardTests.Services;

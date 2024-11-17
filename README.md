@@ -18,13 +18,13 @@
 
 Progress in implementing calculators:
 
-| Profession | Status |
-| ---------- | :----: |
-| Forager    |   🟩    |
-| Guard      |   🟩    |
-| Chef       |   🟩    |
-| Fisher     |   🟩    |
-| Alchemy    |   🟥    |
+| Episode  | Profession | Status |
+| -------- | ---------- | :----: |
+| Hopeport | Guard      |   🟩    |
+| Hopeport | Chef       |   🟩    |
+| Hopeport | Fisher     |   🟩    |
+| Hopeport | Forager    |   🟩    |
+| Hopeport | Alchemist  |   🟥    |
 
 All data is dependent on the Brighter Shores wiki data.
 

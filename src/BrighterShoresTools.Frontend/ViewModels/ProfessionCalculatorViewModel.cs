@@ -1,4 +1,4 @@
-using BrighterShoresTools.Professions.Core.Data;
+using BrighterShoresTools.Professions.Core.Models;
 using BrighterShoresTools.Professions.Core.Services;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;

@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BrighterShoresTools.Professions\BrighterShoresTools.Professions.Core.csproj" />
+    <ProjectReference Include="..\BrighterShoresTools.Professions.Core\BrighterShoresTools.Professions.Core.csproj" />
   </ItemGroup>
 
 </Project>

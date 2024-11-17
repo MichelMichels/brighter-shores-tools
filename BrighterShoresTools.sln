@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BrighterShoresTools.Professions.Core", "src\BrighterShoresTools.Professions\BrighterShoresTools.Professions.Core.csproj", "{08B6C724-521B-4B02-AAFD-BCC4EE49A79F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BrighterShoresTools.Professions.Core", "src\BrighterShoresTools.Professions.Core\BrighterShoresTools.Professions.Core.csproj", "{08B6C724-521B-4B02-AAFD-BCC4EE49A79F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BrighterShoresTools.Professions.Forager", "src\BrighterShoresTools.Professions.Forager\BrighterShoresTools.Professions.Forager.csproj", "{BC5CE438-D648-43FE-88FC-6093317F4357}"
 EndProject
@@ -24,9 +24,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Directory.Build.props = Directory.Build.props
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrighterShoresTools.Professions.Chef", "BrighterShoresTools.Professions.Chef\BrighterShoresTools.Professions.Chef.csproj", "{B8AABB30-46E4-4E02-97F1-2EAACF14111C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrighterShoresTools.Professions.Chef", "src\BrighterShoresTools.Professions.Chef\BrighterShoresTools.Professions.Chef.csproj", "{B8AABB30-46E4-4E02-97F1-2EAACF14111C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrighterShoresTools.Professions.Fisher", "src\BrighterShoresTools.Profession.Fisher\BrighterShoresTools.Professions.Fisher.csproj", "{53431733-E606-44B6-969B-89C31958E411}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrighterShoresTools.Episodes.Core", "src\BrighterShoresTools.Episodes.Core\BrighterShoresTools.Episodes.Core.csproj", "{F2637B79-30A1-4D76-A647-A108AF15302C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -198,6 +200,22 @@ Global
 		{53431733-E606-44B6-969B-89C31958E411}.Release|x64.Build.0 = Release|Any CPU
 		{53431733-E606-44B6-969B-89C31958E411}.Release|x86.ActiveCfg = Release|Any CPU
 		{53431733-E606-44B6-969B-89C31958E411}.Release|x86.Build.0 = Release|Any CPU
+		{F2637B79-30A1-4D76-A647-A108AF15302C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2637B79-30A1-4D76-A647-A108AF15302C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2637B79-30A1-4D76-A647-A108AF15302C}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{F2637B79-30A1-4D76-A647-A108AF15302C}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{F2637B79-30A1-4D76-A647-A108AF15302C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F2637B79-30A1-4D76-A647-A108AF15302C}.Debug|x64.Build.0 = Debug|Any CPU
+		{F2637B79-30A1-4D76-A647-A108AF15302C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F2637B79-30A1-4D76-A647-A108AF15302C}.Debug|x86.Build.0 = Debug|Any CPU
+		{F2637B79-30A1-4D76-A647-A108AF15302C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2637B79-30A1-4D76-A647-A108AF15302C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2637B79-30A1-4D76-A647-A108AF15302C}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{F2637B79-30A1-4D76-A647-A108AF15302C}.Release|ARM64.Build.0 = Release|Any CPU
+		{F2637B79-30A1-4D76-A647-A108AF15302C}.Release|x64.ActiveCfg = Release|Any CPU
+		{F2637B79-30A1-4D76-A647-A108AF15302C}.Release|x64.Build.0 = Release|Any CPU
+		{F2637B79-30A1-4D76-A647-A108AF15302C}.Release|x86.ActiveCfg = Release|Any CPU
+		{F2637B79-30A1-4D76-A647-A108AF15302C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
