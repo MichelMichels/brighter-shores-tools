@@ -21,17 +21,17 @@ public class GuardUnlockRepositoryTests
     }
 
     [TestMethod()]
-    public async Task GetByName_Mauve_Bellplant_Test()
+    public async Task GetByName_Recruit_Sparring_Guard_Test()
     {
         // Arrange
         GuardUnlockRepository repository = new();
 
         // Act
-        ProfessionUnlock? action = await repository.GetByName("Sparring Guard");
+        ProfessionUnlock? action = await repository.GetByName("Recruit Sparring Guard");
 
         // Assert
         Assert.IsNotNull(action);
-        Assert.AreEqual("Sparring Guard", action.Name);
+        Assert.AreEqual("Recruit Sparring Guard", action.Name);
         Assert.AreEqual(0, action.Level);
         Assert.AreEqual(205, action.ExperiencePoints);
     }
