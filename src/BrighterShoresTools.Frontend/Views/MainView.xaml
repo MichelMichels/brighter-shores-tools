@@ -36,6 +36,7 @@
             <ListBox
                 BorderThickness="0"
                 ItemsSource="{Binding ProfessionCalculators}"
+                ScrollViewer.HorizontalScrollBarVisibility="Visible"
                 SelectedItem="{Binding SelectedProfessionCalculator}"
                 Validation.ErrorTemplate="{x:Null}">
                 <ListBox.ItemsPanel>
