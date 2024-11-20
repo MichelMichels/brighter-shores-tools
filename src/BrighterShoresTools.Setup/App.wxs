@@ -11,6 +11,7 @@
 
       <File Source="BrighterShoresTools.deps.json" />
       <File Source="BrighterShoresTools.dll" />
+	  <File Source="BrighterShoresTools.Professions.Alchemist.dll" />
       <File Source="BrighterShoresTools.Professions.Core.dll" />
       <File Source="BrighterShoresTools.Professions.Chef.dll" />
       <File Source="BrighterShoresTools.Professions.Fisher.dll" />
