@@ -30,6 +30,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrighterShoresTools.Profess
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrighterShoresTools.Episodes.Core", "src\BrighterShoresTools.Episodes.Core\BrighterShoresTools.Episodes.Core.csproj", "{F2637B79-30A1-4D76-A647-A108AF15302C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrighterShoresTools.Professions.Generic", "src\BrighterShoresTools.Professions.Generic\BrighterShoresTools.Professions.Generic.csproj", "{A9DA147F-A6E1-4877-95F3-A8692146BABD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -216,6 +218,22 @@ Global
 		{F2637B79-30A1-4D76-A647-A108AF15302C}.Release|x64.Build.0 = Release|Any CPU
 		{F2637B79-30A1-4D76-A647-A108AF15302C}.Release|x86.ActiveCfg = Release|Any CPU
 		{F2637B79-30A1-4D76-A647-A108AF15302C}.Release|x86.Build.0 = Release|Any CPU
+		{A9DA147F-A6E1-4877-95F3-A8692146BABD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9DA147F-A6E1-4877-95F3-A8692146BABD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9DA147F-A6E1-4877-95F3-A8692146BABD}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{A9DA147F-A6E1-4877-95F3-A8692146BABD}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{A9DA147F-A6E1-4877-95F3-A8692146BABD}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A9DA147F-A6E1-4877-95F3-A8692146BABD}.Debug|x64.Build.0 = Debug|Any CPU
+		{A9DA147F-A6E1-4877-95F3-A8692146BABD}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A9DA147F-A6E1-4877-95F3-A8692146BABD}.Debug|x86.Build.0 = Debug|Any CPU
+		{A9DA147F-A6E1-4877-95F3-A8692146BABD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9DA147F-A6E1-4877-95F3-A8692146BABD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9DA147F-A6E1-4877-95F3-A8692146BABD}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{A9DA147F-A6E1-4877-95F3-A8692146BABD}.Release|ARM64.Build.0 = Release|Any CPU
+		{A9DA147F-A6E1-4877-95F3-A8692146BABD}.Release|x64.ActiveCfg = Release|Any CPU
+		{A9DA147F-A6E1-4877-95F3-A8692146BABD}.Release|x64.Build.0 = Release|Any CPU
+		{A9DA147F-A6E1-4877-95F3-A8692146BABD}.Release|x86.ActiveCfg = Release|Any CPU
+		{A9DA147F-A6E1-4877-95F3-A8692146BABD}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
