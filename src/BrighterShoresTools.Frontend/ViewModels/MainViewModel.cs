@@ -1,4 +1,5 @@
-﻿using BrighterShoresTools.Professions.Chef.Services;
+﻿using BrighterShoresTools.Professions.Alchemist.Services;
+using BrighterShoresTools.Professions.Chef.Services;
 using BrighterShoresTools.Professions.Core.Services;
 using BrighterShoresTools.Professions.Fisher.Services;
 using BrighterShoresTools.Professions.Forager.Services;
@@ -24,12 +25,14 @@ public partial class MainViewModel : WindowViewModel
         ForagerCalculator foragerCalculator,
         ChefCalculator chefCalculator,
         FisherCalculator fisherCalculator,
+        AlchemistCalculator alchemistCalculator,
         IExperienceCalculator experienceCalculator)
     {
         _professionCalculators.Add(new ProfessionCalculatorViewModel("Guard", guardCalculator, @"/Resources/Images/guard-icon.png", experienceCalculator));
         _professionCalculators.Add(new ProfessionCalculatorViewModel("Chef", chefCalculator, @"/Resources/Images/chef-icon.png", experienceCalculator));
         _professionCalculators.Add(new ProfessionCalculatorViewModel("Fisher", fisherCalculator, @"/Resources/Images/fisher-icon.png", experienceCalculator));
         _professionCalculators.Add(new ProfessionCalculatorViewModel("Forager", foragerCalculator, @"/Resources/Images/forager-icon.png", experienceCalculator));
+        _professionCalculators.Add(new ProfessionCalculatorViewModel("Alchemist", alchemistCalculator, @"/Resources/Images/alchemist-icon.png", experienceCalculator));
 
         RetrieveVersion();
     }
