@@ -10,7 +10,7 @@
     xmlns:vm="clr-namespace:BrighterShoresTools.Frontend.ViewModels"
     Title="Brighter Shores | Tools"
     Width="384"
-    Height="450"
+    Height="512"
     d:DataContext="{d:DesignInstance Type={x:Type vm:MainViewModel}}"
     mc:Ignorable="d">
     <Window.Resources>
