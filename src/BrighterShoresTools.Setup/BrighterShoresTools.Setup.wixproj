@@ -7,5 +7,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BrighterShoresTools.Frontend\BrighterShoresTools.Frontend.csproj" />
+    <ProjectReference Include="..\BrighterShoresTools.Profession.Fisher\BrighterShoresTools.Professions.Fisher.csproj" />
+    <ProjectReference Include="..\BrighterShoresTools.Professions.Alchemist\BrighterShoresTools.Professions.Alchemist.csproj" />
+    <ProjectReference Include="..\BrighterShoresTools.Professions.Chef\BrighterShoresTools.Professions.Chef.csproj" />
+    <ProjectReference Include="..\BrighterShoresTools.Professions.Core\BrighterShoresTools.Professions.Core.csproj" />
+    <ProjectReference Include="..\BrighterShoresTools.Professions.Forager\BrighterShoresTools.Professions.Forager.csproj" />
+    <ProjectReference Include="..\BrighterShoresTools.Professions.Guard\BrighterShoresTools.Professions.Guard.csproj" />
   </ItemGroup>
 </Project>
