@@ -32,6 +32,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrighterShoresTools.Episode
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrighterShoresTools.Professions.Alchemist", "src\BrighterShoresTools.Professions.Alchemist\BrighterShoresTools.Professions.Alchemist.csproj", "{1CAE40A6-DD0E-440D-93BE-DB971935E791}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrighterShoresTools.Professions.AlchemistTest", "src\BrighterShoresTools.Professions.AlchemistTest\BrighterShoresTools.Professions.AlchemistTest.csproj", "{997C0F9E-56E0-420B-ADAA-8A96A44C9F88}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
