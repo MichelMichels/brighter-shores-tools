@@ -4,7 +4,7 @@
 > This is very much a WIP repository. This code comes with no warranties. Use at own risk.
 
 <p align="center">
-  <img src="docs/screenshot.png" /> 
+  <img src="docs/0.4.0.png" /> 
 </p>
 
 <p align="center">Tools for the MMORPG Brighter Shores &bullet; <a href="https://github.com/MichelMichels/brighter-shores-tools/issues">Report an issue</a></p>
