@@ -9,8 +9,8 @@
     d:DataContext="{d:DesignInstance Type={x:Type vm:ProfessionCalculatorViewModel}}"
     mc:Ignorable="d">
     <Border
-        Width="48"
-        Height="48"
+        Width="55"
+        Height="55"
         Padding="2">
         <Grid>
             <Grid.RowDefinitions>

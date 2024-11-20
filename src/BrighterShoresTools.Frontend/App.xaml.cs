@@ -1,4 +1,5 @@
 ﻿using BrighterShoresTools.Frontend.ViewModels;
+using BrighterShoresTools.Professions.Alchemist.Services;
 using BrighterShoresTools.Professions.Chef.Services;
 using BrighterShoresTools.Professions.Core.Services;
 using BrighterShoresTools.Professions.Fisher.Services;
@@ -34,8 +35,10 @@ public partial class App : Application
         services.AddSingleton<IGuardUnlockRepository, GuardUnlockRepository>();
         services.AddSingleton<IChefUnlockRepository, ChefUnlockRepository>();
         services.AddSingleton<IFisherUnlockRepository, FisherUnlockRepository>();
+        services.AddSingleton<IAlchemistUnlockRepository, AlchemistUnlockRepository>();
         services.AddSingleton<GuardCalculator>();
         services.AddSingleton<ChefCalculator>();
         services.AddSingleton<FisherCalculator>();
+        services.AddSingleton<AlchemistCalculator>();
     }
 }
