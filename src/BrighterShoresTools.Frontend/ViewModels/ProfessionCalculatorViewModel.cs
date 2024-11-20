@@ -29,7 +29,7 @@ public partial class ProfessionCalculatorViewModel : ObservableValidator
     private int _goalExperience;
 
     [ObservableProperty]
-    private Dictionary<ProfessionUnlock, int> _results = [];
+    private List<ProfessionCalculationResult> _results = [];
 
     [ObservableProperty]
     private List<PotionModifierViewModel> _potionModifiers = [
@@ -73,7 +73,6 @@ public partial class ProfessionCalculatorViewModel : ObservableValidator
     private async Task Calculate()
     {
         Results = await Calculator.CalculateNumberOfActions(StartLevel, GoalLevel, SelectedPotionModifier.Modifier, IsOnlyPossibleUnlocksVisible);
-
     }
 
     async partial void OnStartLevelChanged(int value)

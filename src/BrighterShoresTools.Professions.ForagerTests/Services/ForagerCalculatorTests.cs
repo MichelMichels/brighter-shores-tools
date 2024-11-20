@@ -25,12 +25,12 @@ public class ForagerCalculatorTests
         ForagerCalculator calculator = new(foragerUnlockRepository, experienceCalculator);
 
         // Act
-        Dictionary<ProfessionUnlock, int> result = await calculator.CalculateNumberOfActions(0, 1);
+        List<ProfessionCalculationResult> results = await calculator.CalculateNumberOfActions(0, 1);
 
         // Assert        
-        Assert.IsNotNull(result);
-        Assert.IsTrue(result.Count > 0);
-        Assert.AreEqual(5, result.First().Value);
+        Assert.IsNotNull(results);
+        Assert.IsTrue(results.Count > 0);
+        Assert.AreEqual(5, results.First().NumberOfActions);
     }
 }
 

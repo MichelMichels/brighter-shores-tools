@@ -178,25 +178,37 @@
                                                     <TextBlock
                                                         HorizontalAlignment="Center"
                                                         VerticalAlignment="Center"
-                                                        Text="{Binding Key.Level, StringFormat=LVL {0}}" />
+                                                        Text="{Binding Unlock.Level, StringFormat=LVL {0}}" />
                                                 </Border>
                                             </DataTemplate>
                                         </DataGridTemplateColumn.CellTemplate>
                                     </DataGridTemplateColumn>
 
 
-                                    <DataGridTextColumn Width="*" Binding="{Binding Key.Name}">
+                                    <DataGridTextColumn Width="*" Binding="{Binding Unlock.Name}">
                                         <DataGridTextColumn.ElementStyle>
                                             <Style TargetType="TextBlock">
+                                                <Setter Property="Margin" Value="8,0" />
                                                 <Setter Property="TextTrimming" Value="CharacterEllipsis" />
                                                 <Setter Property="VerticalAlignment" Value="Center" />
                                             </Style>
                                         </DataGridTextColumn.ElementStyle>
                                     </DataGridTextColumn>
 
-                                    <DataGridTextColumn Binding="{Binding Value, StringFormat={}{0} actions}">
+                                    <DataGridTextColumn Binding="{Binding NumberOfActions, StringFormat={}{0} actions}">
                                         <DataGridTextColumn.ElementStyle>
                                             <Style TargetType="TextBlock">
+                                                <Setter Property="Margin" Value="8,0" />
+                                                <Setter Property="VerticalAlignment" Value="Center" />
+                                                <Setter Property="TextAlignment" Value="Right" />
+                                            </Style>
+                                        </DataGridTextColumn.ElementStyle>
+                                    </DataGridTextColumn>
+
+                                    <DataGridTextColumn Binding="{Binding NumberOfInventories, StringFormat={}{0} inv.}">
+                                        <DataGridTextColumn.ElementStyle>
+                                            <Style TargetType="TextBlock">
+                                                <Setter Property="Margin" Value="8,0" />
                                                 <Setter Property="VerticalAlignment" Value="Center" />
                                                 <Setter Property="TextAlignment" Value="Right" />
                                             </Style>
